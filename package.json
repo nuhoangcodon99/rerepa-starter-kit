@@ -1,0 +1,71 @@
+{
+  "name": "rerepa-starter-kit",
+  "version": "1.0.0",
+  "description": "Yet another minimal frontend starter kit with React.js and Parcel Bundler",
+  "author": "Hoang Nhat Nguyen <hoangnn93@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "reactjs",
+    "redux",
+    "react-router",
+    "parcel-bundler"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production parcel build src/index.html -d build --detailed-report --no-source-maps",
+    "clean": "rimraf build dist",
+    "precommit": "lint-staged",
+    "start": "parcel ./src/index.html",
+    "lint": "eslint src",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint"
+    ]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
+  },
+  "dependencies": {
+    "history": "^4.7.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.1",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "parcel-bundler": "^1.10.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-hot-loader": "^4.3.11",
+    "react-test-renderer": "^16.5.2",
+    "redux-mock-store": "^1.5.3",
+    "rimraf": "^2.6.2"
+  }
+}
